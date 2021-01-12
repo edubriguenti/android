@@ -1,10 +1,7 @@
-import 'package:bytebankapp/http/webclient.dart';
+import 'package:bytebankapp/components/transaction_auth_dialog.dart';
 import 'package:bytebankapp/screens/contacts_list.dart';
 import 'package:bytebankapp/screens/dashboard.dart';
 import 'package:flutter/material.dart';
-
-import 'models/contact.dart';
-import 'models/transaction.dart';
 
 void main() {
   runApp(ByteBankApp());

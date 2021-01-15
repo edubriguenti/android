@@ -1,7 +1,10 @@
 import 'package:bytebankapp/components/transaction_auth_dialog.dart';
 import 'package:bytebankapp/screens/contacts_list.dart';
+import 'package:bytebankapp/screens/counter.dart';
 import 'package:bytebankapp/screens/dashboard.dart';
 import 'package:flutter/material.dart';
+
+import 'components/theme.dart';
 
 void main() {
   runApp(ByteBankApp());
@@ -17,18 +20,9 @@ class ByteBankApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {
-        '/contacts_list': (context) => ContactsList()
-      },
-      theme: ThemeData(
-          primaryColor: Colors.green[900],
-          accentColor: Colors.blueAccent[700],
-          buttonTheme: ButtonThemeData(
-            buttonColor: Colors.blueAccent[700],
-            textTheme: ButtonTextTheme.primary,
-          )),
+      routes: {'/contacts_list': (context) => ContactsList()},
+      theme: byteBankTheme,
       home: Dashboard(),
     );
   }
 }
-

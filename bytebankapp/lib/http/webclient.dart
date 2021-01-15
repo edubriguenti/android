@@ -8,5 +8,6 @@ const String baseUrl = 'http://192.168.0.95:8080/transactions';
 
 final Client client = HttpClientWithInterceptor.build(
   interceptors: [LoggingInterceptor()],
+  requestTimeout: Duration(seconds: 5)
 );
 
